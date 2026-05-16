@@ -22,25 +22,6 @@ h1 {
     padding: 0px 0px 0px 0px;
 }
 
-h1::after {
-    content: "";
-    width: 100%;
-    height: .1em;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    cursor: default;
-    background-image: repeating-linear-gradient(to right, rgb(0, 0, 0));
-    border-radius: 40%;
-    scale: 0;
-    transition: scale 200ms ease;
-}
-
-h1:hover::after {
-    cursor: default;
-    scale: 1;
-}
-
 .about-me-title {
     text-align: left;
     font-family: 'unkempt', sans-serif;
@@ -99,17 +80,6 @@ body{
     left: 0%;
 }
 
-/* needs to be added */
-
-.heart-image {
-    cursor: default;
-    position: relative;
-    top: -100px;
-    left: 400px;
-    align-self: center;
-    filter: opacity(0);
-}
-
 .duck-image {
     cursor: default;
     position: relative;
@@ -125,54 +95,11 @@ body{
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     width: fit-content;
-    min-width: 280px;
-    margin: 0 auto;
+    margin: auto;
 }
 
 .duck-image:active {
     scale: 150%;
-}
-
-.cute-duck-image {
-    position: absolute;
-    top: -45px;
-    right: -60px;
-    width: 90px;
-    height: 90px;
-    border-radius: 100%;
-    border: rgb(0, 0, 0) 2px;
-      box-shadow: 0 6px 15px rgb(0, 0, 0);
-    border-style: hidden;
-    
-    scale: 0;
-    transform-origin: center;
-    transition: all 0.35s ease;
-    pointer-events: fill;
-    z-index: 10;
-
-    content: '';
-    background: rgba(252, 230, 29, 0);
-}
-
-.discord-logo-image {
-    position: absolute;
-    top: -50px;
-    right: 270px;
-    width: 90px;
-    height: 90px;
-    border-radius: 100%;
-    border: rgb(0, 0, 0) 2px solid;
-    box-shadow: 0 6px 15px rgb(0, 0, 0);
-    border-style: hidden;
-    
-    scale: 0;
-    transform-origin: center;
-    transition: all 0.35s ease;
-    pointer-events: fill;
-    z-index: 10;
-
-    content: '';
-    background: inherit;
 }
 
 .buttons {
@@ -181,17 +108,17 @@ body{
     align-items: center;
     gap: 15px;
     margin-top: 4em;
-    padding: 0 20px;
+    padding: 0 0px;
 }
 
 .project-button,
-.friend-button {
+.friend-button{
     font-family: 'Gorditas', sans-serif;
     font-size: 24px;
     font-weight: 300;
     padding: 14px 32px;
     background-color: rgb(237, 158, 30);
-    border: 5px solid #643000;
+    border: 4px solid #643000;
     color: #000000;
     text-align: center;
     cursor: pointer;
@@ -200,7 +127,27 @@ body{
     transition: all 0.3s ease;
     
     width: fit-content;
-    min-width: 280px;
+    min-width: 310px;
+    margin: 0 auto;
+}
+
+.blog-button {
+    font-family: 'Gorditas', sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    padding: 14px 32px;
+    background-color: rgb(237, 158, 30);
+    border: 4px solid #643000;
+    color: #000000;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2), 0 6px 20px rgba(0,0,0,0.19);
+    border-radius: 1000px;
+    transition: all 0.3s ease;
+    animation: blog-button 0.5s ease-out infinite reverse;
+    
+    width: fit-content;
+    min-width: 310px;
     margin: 0 auto;
 }
 
@@ -211,13 +158,6 @@ body{
     box-shadow: 0 0 16px rgb(119, 119, 119), 0 0 25px rgb(255, 251, 0);
 }
 
-.project-button:hover .cute-duck-image {
-    scale: 1;
-    transform: rotate(25deg);
-    animation: duck-pop 0.5s ease-in-out fixed;
-    transition: ease 0.3s;
-}
-
 .friend-button:hover {
     transform: translateY(-4px);
     background-color: #8a65f9;
@@ -225,11 +165,20 @@ body{
     box-shadow: 0 0 16px rgb(166, 0, 255), 0 0 25px rgb(255, 251, 0);
 }
 
-.friend-button:hover .discord-logo-image {
-    scale: 1;
-    transform: rotate(-25deg);
-    animation: duck-pop 0.5s ease-in-out fixed;
-    transition: ease 0.3s;
+.blog-button:hover {
+    transform: translateY(-4px);
+    background-color: #65f9c7;
+    border-color: #176e5b;
+    box-shadow: 0 0 16px rgb(0, 255, 166), 0 0 25px rgb(255, 251, 0);
+}
+
+.warning {
+    font-family: 'DynaPuff', sans-serif;
+    font-style: italic, sans-serif !important;
+    font-weight: 10;
+    font-size: 10px;
+    padding: 0px 0px 2px 0px;
+    position: relative;
 }
 
 @keyframes about-me {
@@ -257,8 +206,6 @@ body{
     to { transform: rotateY(360deg); }
 }
 
-@keyframes duck-pop {
-    0%   { scale: 0; transform: rotate(-20deg); }
-    60%  { scale: 1.5; transform: rotate(25deg); }
-    100% { scale: 1; transform: rotate(15deg); }
+@keyframes blog-button {
+    50% { transform: scale(1.1, 1.1);}
 }
