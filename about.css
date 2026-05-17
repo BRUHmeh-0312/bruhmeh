@@ -23,11 +23,11 @@ h1 {
 }
 
 .about-me-title {
-    text-align: left;
+    text-align: center;
     font-family: 'unkempt', sans-serif;
-    font-size: 30px;
-    padding: 0px 20px 0px 40px;
-    animation: about-me 1s infinite;
+    font-size: 35px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
 }
 
 .about-me-text {
@@ -144,7 +144,7 @@ body{
     box-shadow: 0 8px 16px rgba(0,0,0,0.2), 0 6px 20px rgba(0,0,0,0.19);
     border-radius: 1000px;
     transition: all 0.3s ease;
-    animation: blog-button 0.5s ease-out infinite reverse;
+    animation: blog-button 0.6s ease-out infinite reverse;
     
     width: fit-content;
     min-width: 310px;
@@ -166,7 +166,6 @@ body{
 }
 
 .blog-button:hover {
-    transform: translateY(-4px);
     background-color: #65f9c7;
     border-color: #176e5b;
     box-shadow: 0 0 16px rgb(0, 255, 166), 0 0 25px rgb(255, 251, 0);
@@ -177,21 +176,8 @@ body{
     font-style: italic, sans-serif !important;
     font-weight: 10;
     font-size: 10px;
-    padding: 0px 0px 2px 0px;
+    padding: 0px 20px 5px 20px;
     position: relative;
-}
-
-@keyframes about-me {
-    0% { color: black; }
-    10% { color: yellow; }
-    20% { color: orange; }
-    30% { color: red; }
-    40% { color: purple; }
-    50% { color: blue; }
-    60% { color: green; }
-    80% { color: black; }
-    90% { color: yellow; }
-    100% { color: orange; }
 }
 
 @keyframes background-animation {
