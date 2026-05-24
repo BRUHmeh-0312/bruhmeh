@@ -1,10 +1,15 @@
 body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 4em;
+    padding: 0 0px;
     cursor: default;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     width: 100%;
     height: 100vh;
-    display: block;
     background-image: radial-gradient(circle at top left,
         white,
          rgb(255, 255, 0),
@@ -46,10 +51,56 @@ body{
     max-width: 600px;
     color-scheme: #000000;
 
+    animation-name: music;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+}
+
+.about-button,
+.blog-button {
+
+    font-family: 'Gorditas', sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    padding: 14px 32px;
+    background-color: rgb(237, 158, 30);
+    border: 4px solid #643000;
+    color: #000000;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2), 0 6px 20px rgba(0,0,0,0.19);
+    border-radius: 1000px;
+    transition: all 0.3s ease;
+    
+    width: fit-content;
+    min-width: 310px;
+    margin: 0 auto;
+
+    animation: about-me 0.5s ease infinite;
+}
+
+.about-button:hover,
+.blog-button:hover {
+    transform: translateY(-4px);
+    background-color: #65f9c7;
+    border-color: #176e5b;
+    box-shadow: 0 0 16px rgb(0, 255, 166), 0 0 25px rgb(255, 251, 0);
 }
 
 @keyframes background-animation {
     0% { background-position: 0% 0%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 0%; }
+}
+
+@keyframes music {
+    0% { transform: scale(1, 1); }
+    50% { transform: scale(1.1, 1.2); }
+    100% { transform: scale(1, 1); }
+}
+
+@keyframes about-me {
+    50% { transform: scale(1.1, 1.1);}
 }
