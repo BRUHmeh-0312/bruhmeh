@@ -1,0 +1,212 @@
+.header {
+    position: relative;
+    cursor: default;
+    top: 30px;
+    left: 0px;
+    text-align: center;
+    width: max-content;
+    margin: 0 auto;
+    padding: 0px 0px 0px 0px;
+    font-family: 'DynaPuff', sans-serif;
+    color: black;
+    font-weight: 700;
+    font-size: 48px;
+}
+
+/* just an appear animation
+
+animation: appear-animation linear;
+    animation-timeline: view();
+    animation-range: entry 0;
+
+*/
+
+h1 {
+    position: relative;
+    cursor: default;
+    text-align: center;
+    width: max-content;
+    margin: 0 auto;
+    padding: 0px 0px 0px 0px;
+}
+
+.about-me-title {
+    text-align: center;
+    font-family: 'unkempt', sans-serif;
+    font-size: 35px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+.about-me-text {
+    text-align: left;
+    font-family: 'unkempt', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    padding: 0px 20px 0px 40px;
+}
+
+body{
+    cursor: default;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 100%;
+    height: 100vh;
+    display: block;
+    background-image: radial-gradient(circle at top left,
+        white,
+         rgb(255, 255, 0),
+          rgb(255, 191, 0),
+           rgb(212, 120, 0),
+            rgb(255, 81, 0),
+             rgb(255, 0, 0),
+              rgb(255, 81, 0),
+               rgb(212, 120, 0),
+                rgb(255, 191, 0),
+                 white);
+    background-size: 300% 300%;
+    color: #000000;
+    padding: 0px;
+    margin: 0;
+    letter-spacing: 0.5px;
+    background-attachment: fixed;
+
+    animation-name: background-animation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.footer {
+    font-family: 'DynaPuff', sans-serif;
+    font-style: italic, sans-serif !important;
+    font-weight: 400;
+    font-size: 24px;
+    padding: 0px 0px 35px 0px;
+    position: relative;
+    top: 20px;
+    left: 0%;
+}
+
+.duck-image {
+    cursor: default;
+    position: relative;
+    align-self: center;
+    border: 4px #000000;
+    border-style: dashed;
+    box-shadow: 0 6px 15px rgb(0, 0, 0);
+    border-radius: 50px;
+    transform: perspective(1000px);
+    transition-property: transform;
+    animation-name: duck-animation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    width: fit-content;
+    margin: auto;
+}
+
+.duck-image:active {
+    scale: 150%;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 4em;
+    padding: 0 0px;
+}
+
+.project-button,
+.friend-button{
+    font-family: 'Gorditas', sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    padding: 14px 32px;
+    background-color: rgb(237, 158, 30);
+    border: 4px solid #643000;
+    color: #000000;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2), 0 6px 20px rgba(0,0,0,0.19);
+    border-radius: 1000px;
+    transition: all 0.3s ease;
+    
+    width: fit-content;
+    min-width: 310px;
+    margin: 0 auto;
+}
+
+.blog-button,
+.music-button {
+    font-family: 'Gorditas', sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    padding: 14px 32px;
+    background-color: rgb(237, 158, 30);
+    border: 4px solid #643000;
+    color: #000000;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2), 0 6px 20px rgba(0,0,0,0.19);
+    border-radius: 1000px;
+    transition: all 0.3s ease;
+    animation: blog-button 0.6s ease-out infinite reverse;
+    
+    width: fit-content;
+    min-width: 310px;
+    margin: 0 auto;
+}
+
+.project-button:hover {
+    transform: translateY(-4px);
+    background-color: #909692;
+    border-color: #2c332e;
+    box-shadow: 0 0 16px rgb(119, 119, 119), 0 0 25px rgb(255, 251, 0);
+}
+
+.friend-button:hover {
+    transform: translateY(-4px);
+    background-color: #8a65f9;
+    border-color: #39176e;
+    box-shadow: 0 0 16px rgb(166, 0, 255), 0 0 25px rgb(255, 251, 0);
+}
+
+.blog-button:hover,
+.music-button:hover {
+    background-color: #65f9c7;
+    border-color: #176e5b;
+    box-shadow: 0 0 16px rgb(0, 255, 166), 0 0 25px rgb(255, 251, 0);
+}
+
+.warning {
+    font-family: 'DynaPuff', sans-serif;
+    font-style: italic, sans-serif !important;
+    font-weight: 10;
+    font-size: 20px;
+    padding: 0px 20px 5px 20px;
+    position: relative;
+}
+
+@keyframes appear-animation {
+    from { opacity: 0; scale: 0; }
+    to { opacity: 1; scale: 1; }
+}
+
+@keyframes background-animation {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 0%; }
+}
+
+@keyframes duck-animation {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(180deg); }
+    to { transform: rotateY(360deg); }
+}
+
+@keyframes blog-button {
+    50% { transform: scale(1.1, 1.1);}
+}
