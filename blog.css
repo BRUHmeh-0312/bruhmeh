@@ -59,7 +59,7 @@ body{
     left: 0%;
 }
 
-button {
+.about-button {
     font-family: 'Gorditas', sans-serif;
     font-size: 24px;
     font-weight: 300;
@@ -83,7 +83,7 @@ button {
     animation: about-me 0.5s ease infinite;
 }
 
-button:hover {
+.about-button:hover {
     transform: translateY(-4px);
     background-color: #65f9c7;
     border-color: #176e5b;

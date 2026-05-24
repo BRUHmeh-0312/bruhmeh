@@ -153,6 +153,25 @@ body{
     box-shadow: 0 8px 16px rgba(0,0,0,0.2), 0 6px 20px rgba(0,0,0,0.19);
     border-radius: 1000px;
     transition: all 0.3s ease;
+    
+    width: fit-content;
+    min-width: 310px;
+    margin: 0 auto;
+}
+
+.blog-button {
+    font-family: 'Gorditas', sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    padding: 14px 32px;
+    background-color: rgb(237, 158, 30);
+    border: 4px solid #643000;
+    color: #000000;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2), 0 6px 20px rgba(0,0,0,0.19);
+    border-radius: 1000px;
+    transition: all 0.3s ease;
     animation: blog-button 0.6s ease-out infinite reverse;
     
     width: fit-content;
@@ -176,6 +195,8 @@ body{
 
 .blog-button:hover,
 .music-button:hover {
+
+.blog-button:hover {
     background-color: #65f9c7;
     border-color: #176e5b;
     box-shadow: 0 0 16px rgb(0, 255, 166), 0 0 25px rgb(255, 251, 0);
@@ -188,11 +209,13 @@ body{
     font-size: 20px;
     padding: 0px 20px 5px 20px;
     position: relative;
+
 }
 
 @keyframes appear-animation {
     from { opacity: 0; scale: 0; }
     to { opacity: 1; scale: 1; }
+
 }
 
 @keyframes background-animation {
@@ -208,5 +231,6 @@ body{
 }
 
 @keyframes blog-button {
-    50% { transform: scale(1.1, 1.1);}
+    0% { transform: scale(1, 1); }
+    50% { transform: scale(1.1, 1.1); }
 }
